@@ -22,6 +22,7 @@ We can access the container attaching to its PID 1 (that is a bash) :
   $ docker attach $CONT_ID
 ```
 if you exit the shell with ```CTRL-D``` or ```exit```  the container will die because its PID 1 exits.
+
 If you want to keep the container active, exit with '''CTRL-PQ''' (yes, P and Q at the same time as CTRL)
 
 The **QE** container has the QuantumEspresso executable (**pw.x**) , an input test file (**relax.in**)
