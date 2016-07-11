@@ -17,12 +17,12 @@ You can run the container in background  with :
 ```
   $ CONT_ID=`docker run -d -it qe`
 ```
-We can access the container attaching of the host on which the container ssh service is mapped :
+We can access the container attaching to its PID 1 (that is a bash) :
 ```
-  $ PORT=`docker port $CONT_ID 22|sed -e 's#.*:##'`
-  $ ssh -p $PORT qe@127.0.0.1
+  $ docker attach $CONT_ID
 ```
-the initial password for the 'qe' user is 'mammamia', don't forget to change it immediately.
+if you exit the shell with ```CTRL-D``` or ```exit```  the container will die because its PID 1 exits.
+If you want to keep the container active, exit with '''CTRL-PQ''' (yes, P and Q at the same time as CTRL)
 
 The **QE** container has the QuantumEspresso executable (**pw.x**) , an input test file (**relax.in**)
 and 2 pseudopotential files necessary to run the test (**C.pz-rrkjus.UPF** and **O.pz-rrkjus.UPF**) inside
@@ -40,10 +40,9 @@ and the container. In this case you create a subdir in your host :
 ```
 and when you run the container you share this directory  with the container as a volume :
 ```
- $ CONT_ID=`docker run -v ~/qe-in-out:/home/qe/qe-in-out -d -it qe-ssh`
- $ PORT=`docker port $CONT_ID|sed -e 's#.*:##'`
+ $ CONT_ID=`docker run -v ~/qe-in-out:/home/qe/qe-in-out -d -it qe`
+ $ docker attach $CONT_ID
 ```
-### NB. this container can be reached via ssh through **your host port $PORT** eventually from the Internet at large.
 
 ![qe](http://www.quantum-espresso.org/wp-content/uploads/2011/12/Quantum_espresso_logo.jpg)
 
