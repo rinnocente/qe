@@ -20,7 +20,7 @@ RUN apt update \
 #
 WORKDIR /root 
 # we prepare a bin subdir where to store
-# espresso binairies and dlmenu
+# espresso binaries and dlmenu
 RUN mkdir bin
 #
 RUN  wget http://people.sissa.it/~inno/qe/qe.tgz  \
