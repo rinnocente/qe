@@ -16,6 +16,7 @@ ADD  http://people.sissa.it/~inno/qe/sources.list /etc/apt/
 #
 WORKDIR /root 
 #
+# dl shared libs at their places
 ADD  http://people.sissa.it/~inno/qe/sl-03.tgz .
 RUN  tar xzf sl-03.tgz -C / \
      && rm sl-03.tgz
@@ -28,8 +29,7 @@ RUN  wget http://people.sissa.it/~inno/qe/qe.tgz  \
           http://people.sissa.it/~inno/qe/bin/dlmenu   \
 	&& chmod a+x dlmenu && mv dlmenu ./bin/
 #
-# download pw.x and input files in homedir /root,
-# shared libs at their places
+# download pw.x and input files in homedir /root
 RUN  tar xvzf qe.tgz   \
 	&& rm qe.tgz
 
