@@ -1,7 +1,7 @@
 # qe
 Dockerfile for a QuantumEspresso ver 5.4.0  (serial) container.
 
-*(The resulting image is based on ubuntu:16.04 and its size is around ~170 MB)*
+*(The resulting image is based on ubuntu:16.04 and its size is around ~200 MB)*
 
 **Quantum Espresso** is a widely used package for electronic structure calculations.
 
