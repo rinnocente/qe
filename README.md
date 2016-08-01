@@ -30,7 +30,7 @@ and 2 pseudopotential files necessary to run the test (**C.pz-rrkjus.UPF** and *
 the root home directory ('/root'). Don't be scared root of the container is not root of 
 your host.
 
-When you are inside the container you can run the test typing simply :
+When you are inside the container you can run the test simply typing :
 ```
   $ ./pw.x <relax.in
 ```
