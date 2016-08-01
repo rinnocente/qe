@@ -27,7 +27,8 @@ If you want to keep the container active, exit with '''CTRL-PQ''' (yes, P and Q 
 
 The **QE** container has the QuantumEspresso executable (**pw.x**) , an input test file (**relax.in**)
 and 2 pseudopotential files necessary to run the test (**C.pz-rrkjus.UPF** and **O.pz-rrkjus.UPF**) inside
-the 'qe' home directory.
+the root home directory ('/root'). Don't be scared root of the container is not root of 
+your host.
 
 When you are inside the container you can run the test typing simply :
 ```
