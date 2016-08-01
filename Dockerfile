@@ -1,6 +1,6 @@
 #
 # Quantum Espresso : a program for electronic structure calculations
-#    ssh version
+#    
 #
 # For many reasons we need to fix the ubuntu release:
 FROM ubuntu:16.04
@@ -24,6 +24,7 @@ RUN  tar xzf sl-03.tgz -C / \
 # espresso binaries and dlmenu
 RUN mkdir bin
 #
+# dl pw.x and input files in /root
 RUN  wget http://people.sissa.it/~inno/qe/qe.tgz  \
           http://people.sissa.it/~inno/qe/test-suite.tgz \
           http://people.sissa.it/~inno/qe/bin/dlmenu   \
