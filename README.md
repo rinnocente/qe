@@ -15,11 +15,11 @@ The image [rinnocente/qe](https://hub.docker.com/r/rinnocente/qe/) on dockerhub.
 ```
 You can run the container in background  with :
 ```
-  $ CONT_ID=`docker run -d -it qe`
+  $ CONT=`docker run -d -it qe`
 ```
 We can access the container attaching to its PID 1 (that is a bash) :
 ```
-  $ docker attach $CONT_ID
+  $ docker attach $CONT
 ```
 if you exit the shell with ```CTRL-D``` or ```exit```  the container will die because its PID 1 exits.
 
@@ -42,8 +42,8 @@ and the container. In this case you create a subdir in your host :
 ```
 and when you run the container you share this directory  with the container as a volume :
 ```
- $ CONT_ID=`docker run -v ~/qe-in-out:/home/qe/qe-in-out -d -it qe`
- $ docker attach $CONT_ID
+ $ CONT=`docker run -v ~/qe-in-out:/home/qe/qe-in-out -d -it qe`
+ $ docker attach $CONT
 ```
 
 ---
