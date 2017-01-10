@@ -23,7 +23,7 @@ We can access the container attaching to its PID 1 (that is a bash) :
 ```
 if you exit the shell with ```CTRL-D``` or ```exit```  the container will die because its PID 1 exits.
 
-If you want to keep the container active, exit with '''CTRL-PQ''' (yes, P and Q at the same time as CTRL)
+If you want to keep the container active, exit with CTRL-P CTRL-Q (keep down CTRL then press P and then Q).
 
 The **QE** container has the QuantumEspresso executable (**pw.x**) , an input test file (**relax.in**)
 and 2 pseudopotential files necessary to run the test (**C.pz-rrkjus.UPF** and **O.pz-rrkjus.UPF**) inside
