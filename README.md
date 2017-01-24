@@ -1,5 +1,5 @@
 # qe
-Dockerfile for a QuantumEspresso ver 5.4.0  (serial) container.
+QuantumEspresso  5.4 serial binaries.
 
 *(The resulting image is based on ubuntu:16.04 and its size is around ~200 MB)*
 
